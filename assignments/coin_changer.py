@@ -15,35 +15,8 @@ def loop(amt, total_coin):
             total_coin += remains//num
             remains = remains%num
             continue
-
+    print('input: ', amt)
     print(total_coin)
-
-def simple_if(amt, total_coin):
-    if amt % 10 == 0:
-        total_coin += amt//10
-        print(total_coin)
-        sys.exit()
-    else:
-        total_coin += amt//10
-        remains = amt%10
-
-    if remains % 5 == 0:
-        total_coin += remains//5
-        print(total_coin)
-        sys.exit()
-    else:
-        total_coin += remains//5
-        remains = remains%5
-    
-    if remains % 2 == 0:
-        total_coin += remains//2
-        print(total_coin)
-    else:
-        total_coin += remains//2
-        remains = remains%2
-        
-        total_coin += remains//1
-        print(total_coin)
 
 def main():
     parser = ArgumentParser(description='Coin Change')
